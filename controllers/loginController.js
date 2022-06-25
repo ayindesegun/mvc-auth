@@ -56,8 +56,8 @@ const loginView = (req, res) => {
 }
 // POST request to the login route and Validation for login
 const loginUser = (req, res) => {
-  const { name, email, password } = req.body
-  if (!name || !email) {
+  const { email, password } = req.body
+  if (!email || !password) {
     console.log('Please fill empty fields')
     res.render('login', { email, password })
   } else {
